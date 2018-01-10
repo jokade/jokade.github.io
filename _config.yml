@@ -69,6 +69,8 @@ plugins:
 # - jemoji
  - jekyll-sitemap
  - jekyll-feed
+ - jekyll/footnotes
+ - jekyll-mermaid
 
 # ---------------------------------------------------------------
 # Site Information Settings
@@ -117,7 +119,7 @@ index_with_subtitle: true
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories/
+#  categories: /categories/
   #about: /about/
   archives: /archives/
   tags: /tags/
@@ -213,7 +215,7 @@ font:
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
-  GitHub: http://gihub.com/jokade
+  GitHub: http://github.com/jokade
   #LinkLabel: Link
 
 
@@ -266,7 +268,7 @@ sidebar:
   #  - remove  Totally remove sidebar including sidebar toggle.
   display: post
   #display: always
-  #display: hide
+#  display: hide
   #display: remove
 
   # Sidebar offset from top menubar in pixels.
@@ -359,6 +361,10 @@ highlight_theme: normal
 # ---------------------------------------------------------------
 # Third Party Services Settings
 # ---------------------------------------------------------------
+
+mermaid:
+  src: /assets/js/mermaid/mermaid.min.js
+
 
 # MathJax Support
 mathjax:

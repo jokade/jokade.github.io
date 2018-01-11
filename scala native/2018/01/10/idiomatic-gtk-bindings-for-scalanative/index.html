@@ -451,7 +451,7 @@ which then will automatically handle all recognized arguments and remove them fr
   </li>
   <li>
     <p>Next we create a new toplevel window, set the window title, the border width (an inner padding between window
-border and its child), and request a preferred window size. We need the calls to <code class="highlighter-rouge">GTK_WINDOW()</code> and <code class="highlighter-rouge">GTK_CONTAINER()</code><sup><a href="#fc7d:fn:1" class="footnote" id="fc7d:fn-back:1">1</a></sup> 
+border and its child), and request a preferred window size. We need the calls to <code class="highlighter-rouge">GTK_WINDOW()</code> and <code class="highlighter-rouge">GTK_CONTAINER()</code><sup><a href="#a9e0:fn:1" class="footnote" id="a9e0:fn-back:1">1</a></sup> 
 to cast <code class="highlighter-rouge">window</code> to the expected type.</p>
   </li>
   <li>
@@ -498,7 +498,7 @@ translate the example above line by line to Scala Native, e.g.:</p>
 </code></pre>
 </div>
 
-<p>However, Gtk+ is an object-oriented library<sup><a href="#fc7d:fn:2" class="footnote" id="fc7d:fn-back:2">2</a></sup>: we have some global functions (<code class="highlighter-rouge">gtk_init</code>, <code class="highlighter-rouge">gtk_main</code>),
+<p>However, Gtk+ is an object-oriented library<sup><a href="#a9e0:fn:2" class="footnote" id="a9e0:fn-back:2">2</a></sup>: we have some global functions (<code class="highlighter-rouge">gtk_init</code>, <code class="highlighter-rouge">gtk_main</code>),
 but the bulk are either</p>
 <ul>
   <li>object constructors (<code class="highlighter-rouge">gtk_window_new</code>, <code class="highlighter-rouge">gtk_label_new</code>),</li>
@@ -792,12 +792,12 @@ intends to provide bindings for GLib, Gtk+, and possibly other libraries from th
 
 <hr />
 <ol class="footnotelist">
-<li id="fc7d:fn:1" class="footnotebody" value="1">
+<li id="a9e0:fn:1" class="footnotebody" value="1">
   Actually, these are macros.
-  <a href="#fc7d:fn-back:1" class="backlink">⏎</a></li>
-<li id="fc7d:fn:2" class="footnotebody" value="2">
+  <a href="#a9e0:fn-back:1" class="backlink">⏎</a></li>
+<li id="a9e0:fn:2" class="footnotebody" value="2">
   Gtk+ is based on GObject, a pure C framework for object-oriented programming with single-inheritance classes.
-  <a href="#fc7d:fn-back:2" class="backlink">⏎</a></li>
+  <a href="#a9e0:fn-back:2" class="backlink">⏎</a></li>
 </ol>
 
       

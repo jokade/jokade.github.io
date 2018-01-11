@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-01-11T17:50:22+01:00</updated><id>/</id><title type="html">jokade</title><author><name>jokade</name></author><entry><title type="html">Object-Oriented Scala Native Bindings to Gtk+</title><link href="/scala%20native/2018/01/10/idiomatic-gtk-bindings-for-scalanative/" rel="alternate" type="text/html" title="Object-Oriented Scala Native Bindings to Gtk+" /><published>2018-01-10T00:00:00+01:00</published><updated>2018-01-10T00:00:00+01:00</updated><id>/scala%20native/2018/01/10/idiomatic-gtk-bindings-for-scalanative</id><content type="html" xml:base="/scala%20native/2018/01/10/idiomatic-gtk-bindings-for-scalanative/">&lt;!-- A small example that shows how idiomatic bindings to [Gtk+](http://www.gtk.org) can be achieved in [Scala Native](http://www.scala-native.org).--&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-01-11T18:38:49+01:00</updated><id>/</id><title type="html">jokade</title><author><name>jokade</name></author><entry><title type="html">Object-Oriented Scala Native Bindings to Gtk+</title><link href="/scala%20native/2018/01/10/idiomatic-gtk-bindings-for-scalanative/" rel="alternate" type="text/html" title="Object-Oriented Scala Native Bindings to Gtk+" /><published>2018-01-10T00:00:00+01:00</published><updated>2018-01-10T00:00:00+01:00</updated><id>/scala%20native/2018/01/10/idiomatic-gtk-bindings-for-scalanative</id><content type="html" xml:base="/scala%20native/2018/01/10/idiomatic-gtk-bindings-for-scalanative/">&lt;!-- A small example that shows how idiomatic bindings to [Gtk+](http://www.gtk.org) can be achieved in [Scala Native](http://www.scala-native.org).--&gt;
 
 &lt;p&gt;Alright, that’s not too impressive… but it’s sufficient to explore the basic concepts required to make an object-oriented
 &lt;a href=&quot;http://www.scala-native.org&quot;&gt;Scala Native&lt;/a&gt; binding to &lt;a href=&quot;http://www.gtk.org&quot;&gt;Gtk+&lt;/a&gt;.&lt;/p&gt;
@@ -55,7 +55,7 @@ which then will automatically handle all recognized arguments and remove them fr
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Next we create a new toplevel window, set the window title, the border width (an inner padding between window
-border and its child), and request a preferred window size. We need the calls to &lt;code class=&quot;highlighter-rouge&quot;&gt;GTK_WINDOW()&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;GTK_CONTAINER()&lt;/code&gt;&lt;sup&gt;&lt;a href=&quot;#fc7d:fn:1&quot; class=&quot;footnote&quot; id=&quot;fc7d:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; 
+border and its child), and request a preferred window size. We need the calls to &lt;code class=&quot;highlighter-rouge&quot;&gt;GTK_WINDOW()&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;GTK_CONTAINER()&lt;/code&gt;&lt;sup&gt;&lt;a href=&quot;#a9e0:fn:1&quot; class=&quot;footnote&quot; id=&quot;a9e0:fn-back:1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; 
 to cast &lt;code class=&quot;highlighter-rouge&quot;&gt;window&lt;/code&gt; to the expected type.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
@@ -102,7 +102,7 @@ translate the example above line by line to Scala Native, e.g.:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;However, Gtk+ is an object-oriented library&lt;sup&gt;&lt;a href=&quot;#fc7d:fn:2&quot; class=&quot;footnote&quot; id=&quot;fc7d:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;: we have some global functions (&lt;code class=&quot;highlighter-rouge&quot;&gt;gtk_init&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;gtk_main&lt;/code&gt;),
+&lt;p&gt;However, Gtk+ is an object-oriented library&lt;sup&gt;&lt;a href=&quot;#a9e0:fn:2&quot; class=&quot;footnote&quot; id=&quot;a9e0:fn-back:2&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;: we have some global functions (&lt;code class=&quot;highlighter-rouge&quot;&gt;gtk_init&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;gtk_main&lt;/code&gt;),
 but the bulk are either&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;object constructors (&lt;code class=&quot;highlighter-rouge&quot;&gt;gtk_window_new&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;gtk_label_new&lt;/code&gt;),&lt;/li&gt;
@@ -396,10 +396,10 @@ intends to provide bindings for GLib, Gtk+, and possibly other libraries from th
 
 &lt;hr /&gt;
 &lt;ol class=&quot;footnotelist&quot;&gt;
-&lt;li id=&quot;fc7d:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
+&lt;li id=&quot;a9e0:fn:1&quot; class=&quot;footnotebody&quot; value=&quot;1&quot;&gt;
   Actually, these are macros.
-  &lt;a href=&quot;#fc7d:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&quot;fc7d:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
+  &lt;a href=&quot;#a9e0:fn-back:1&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&quot;a9e0:fn:2&quot; class=&quot;footnotebody&quot; value=&quot;2&quot;&gt;
   Gtk+ is based on GObject, a pure C framework for object-oriented programming with single-inheritance classes.
-  &lt;a href=&quot;#fc7d:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
+  &lt;a href=&quot;#a9e0:fn-back:2&quot; class=&quot;backlink&quot;&gt;⏎&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</content><author><name>jokade</name></author><category term="tutorial" /><category term="scala-native" /><category term="gtk+" /><summary type="html"></summary></entry></feed>

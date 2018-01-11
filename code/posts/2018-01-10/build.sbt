@@ -1,7 +1,7 @@
 scalaVersion in ThisBuild := "2.11.12"
 
 val Version = new {
-  val obj_interop = "0.0.1-SNAPSHOT"
+  val obj_interop = "0.0.1"
 }
 
 
